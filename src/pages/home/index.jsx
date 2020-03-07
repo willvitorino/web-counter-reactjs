@@ -27,9 +27,9 @@ class Home extends React.Component {
       <section className="main" >
         <div className="header">Contador Online</div>
         <div className="container" >
-          <button onClick={this.decrementCounter} > - </button>
+          <button className="btn" onClick={this.decrementCounter} > - </button>
           <input type="number" value={counter} readOnly />
-          <button onClick={this.incrementCounter} > + </button>
+          <button className="btn" onClick={this.incrementCounter} > + </button>
         </div>
       </section>
     )

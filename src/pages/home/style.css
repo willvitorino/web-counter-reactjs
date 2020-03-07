@@ -1,20 +1,44 @@
-.header {
+.main {
+  height: 80vh;
+}
+
+.main .header {
+  background: rgb(85,209,255);
+  background: linear-gradient(0deg, rgba(85,209,255,1) 0%, rgba(65,144,232,1) 50%, rgba(71,109,255,1) 100%);
+
+  color: white;
   text-align: center;
   padding: 1rem 0px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid lightgray;
 }
 
-.container {
+.main .container {
+  background-color: white;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   padding: 1rem;
+  height: 100%;
 }
 
-.container button {
+.main .container .btn {
   margin: 0px 2rem;
-}
-.container input[type="number"] {
+  /* background-color: #41E7E8;
+  border: thin solid lightgray;
   height: 2rem;
+  width: 2rem;
+  border-radius: .25rem;
+  padding: 0rem .75rem; */
+}
+.main .container input[type="number"] {
+  height: 2rem;
+  background-color: whitesmoke;
+  border: thin solid lightgray;
+  border-radius: 1rem;
+  padding: 0px 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
