@@ -1,3 +1,10 @@
+.header {
+  text-align: center;
+  padding: 1rem 0px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .container {
   display: flex;
   align-items: center;

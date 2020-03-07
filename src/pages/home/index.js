@@ -27,6 +27,7 @@ export default class Home extends React.Component {
     const { counter } = this.state
     return (
       <section>
+        <div className="header">Contador Online</div>
         <div className="container" >
           <button onClick={this.decrementCounter} > - </button>
           <input type="number" value={counter} readOnly />
