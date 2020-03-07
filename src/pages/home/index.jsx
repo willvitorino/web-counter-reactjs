@@ -1,7 +1,10 @@
 import React from 'react'
 import './style.css'
 
-export default class Home extends React.Component {
+import { connect } from 'react-redux'
+
+
+class Home extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -10,23 +13,18 @@ export default class Home extends React.Component {
   }
 
   incrementCounter = () => {
-    const value = this.state.counter + 1
-    this.setState({
-      counter: value
-    })
+
+    this.props.dispatch({ type: 'INCREMENT' })
   }
 
   decrementCounter = () => {
-    const value = this.state.counter - 1
-    this.setState({
-      counter: value
-    })
+    this.props.dispatch({ type: 'DECREMENT' })
   }
 
   render() {
-    const { counter } = this.state
+    const { counter } = this.props
     return (
-      <section>
+      <section className="main" >
         <div className="header">Contador Online</div>
         <div className="container" >
           <button onClick={this.decrementCounter} > - </button>
@@ -37,3 +35,9 @@ export default class Home extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  counter: state.counter
+});
+
+export default connect(mapStateToProps)(Home)
